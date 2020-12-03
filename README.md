@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# Desafio Trilha 1 - Academia Webjump
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre
 
-## Available Scripts
+Ao final da trilha 2 da Academia Webjump foi proposto o seguinte desafio:
+A criação de um site que se comunicasse com o [The Movie Data Base](https://www.themoviedb.org/) através da [API](https://www.themoviedb.org/documentation/api) deles. Esse site deve listar os três filmes que estão em destaque, os filmes populares e os filmes em cartaz. Além disso o usuário do site deve conseguir adicionar e remover filmes de uma lista de favoritos, e a lista de favoritos deve ser exibida ao final da página.
 
-In the project directory, you can run:
+O site deve seguir o layout provido pela equipe de Design no [Figma](https://www.figma.com/file/um4dcEJCOlEvB6kCe9KCOD/Cinejump?node-id=0%3A1), porém a responsividade dele não é obrigatória.
 
-### `yarn start`
+Outros itens não obrigatórios são: uma listagem de trailers dos filmes populares, funcionalidade de busca, filtro entre séries e filmes, e uma opção de criar um perfil.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Obs: O Layout e o desafio são os mesmos da Trilha 1, porém dessa vez era permitido o uso de [React](https://reactjs.org/) e demais bibliotecas.
+## Rodando o projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Requisitos:
+ - [NodeJS](https://nodejs.org/en/);
+ - [Yarn](https://yarnpkg.com/) ou [NPM](https://www.npmjs.com/);
 
-### `yarn test`
+Após clonar este repositório, navegue até a pasta em que ele está localizado e rode o comando:
+`yarn install` ou apenas `yarn` para que as dependências sejam instaladas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Em seguida, rode o comando `yarn start` para iniciar o servidor local e navegar pela aplicação. Por padrão essa aplicação roda na porta `3000`.
