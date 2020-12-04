@@ -1,4 +1,4 @@
-# Desafio Trilha 1 - Academia Webjump
+# Desafio Trilha 2 - Academia Webjump
 
 ## Sobre
 
