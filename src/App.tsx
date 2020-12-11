@@ -7,6 +7,7 @@ const App = () => {
     <div className="App">
       <AppStyles />
       <MovieList name="Populares" getFrom="popular" />
+      <MovieList name="Em exibição" getFrom="now_playing" />
     </div>
   );
 };

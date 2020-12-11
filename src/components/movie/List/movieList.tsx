@@ -24,10 +24,12 @@ const MovieList: React.FC<IMovieList> = ({ name, getFrom }) => {
   return (
     <ListStyles>
       <p>{name}</p>
-      {result &&
-        result.map((movie, i) => {
-          return <MovieContainer movie={movie} key={i} />;
-        })}
+      <div>
+        {result &&
+          result.map((movie, i) => {
+            return <MovieContainer movie={movie} key={i} />;
+          })}
+      </div>
     </ListStyles>
   );
 };
