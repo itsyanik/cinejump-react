@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Movie = styled.div`
+const MovieStyles = styled.div`
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
@@ -12,6 +12,8 @@ const Movie = styled.div`
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
 
   &:hover {
     cursor: pointer;
@@ -43,4 +45,4 @@ const Movie = styled.div`
   }
 `
 
-export default Movie
+export default MovieStyles

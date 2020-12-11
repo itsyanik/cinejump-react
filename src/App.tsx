@@ -1,11 +1,10 @@
-import React from 'react';
-
-import MovieContainer from './components/movie/Container'
+import React from "react";
+import AppStyles from "./appStyles";
 
 function App() {
   return (
     <div className="App">
-      <MovieContainer name="Aves de Rapina" posterSrc="https://image.tmdb.org/t/p/w780/A50Ngq9lh9aCTGHC6kttrppHNoF.jpg"/>
+      <AppStyles />
     </div>
   );
 }

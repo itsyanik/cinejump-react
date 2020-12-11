@@ -1,24 +1,29 @@
-import React, { useState } from 'react'
-import Movie from './movieContainerStyles'
-import { ReactComponent as Heart } from '../../../assets/icons/heart.svg'
+import React, { useState } from "react";
+import MovieStyles from "./movieContainerStyles";
+import { ReactComponent as Heart } from "../../../assets/icons/heart.svg";
+import Movie from "../../../models/movie";
 
 interface ContainerProps {
-  posterSrc: string,
-  name: string
+  movie: Movie;
 }
 
-const MovieContainer: React.FC<ContainerProps> = ({ posterSrc, name }) => {
+const MovieContainer: React.FC<ContainerProps> = ({ movie }) => {
+  const { original_title, poster_path } = movie;
 
-  const [favorite, setFavorite] = useState(false)
+  const [favorite, setFavorite] = useState(false);
+  const basePosterUrl = process.env.REACT_APP_TMDB_IMAGE_URL;
 
   return (
-    <Movie>
+    <MovieStyles>
       <button onClick={() => setFavorite(!favorite)}>
-        <Heart fill={favorite ? '#E83F5B' : 'black'}/>
+        <Heart fill={favorite ? "#E83F5B" : "black"} />
       </button>
-      <img src={posterSrc} alt={`Poster for the movie ${name}`}/>
-    </Movie>
-  )
-}
+      <img
+        src={`${basePosterUrl}/w780${poster_path}`}
+        alt={`Poster for the movie ${original_title}`}
+      />
+    </MovieStyles>
+  );
+};
 
-export default MovieContainer
+export default MovieContainer;
