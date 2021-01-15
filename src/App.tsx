@@ -1,6 +1,7 @@
 import React from "react";
 import AppStyles from "./appStyles";
 import MovieList from "components/movie/List";
+import Trailers from "components/Trailers";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <AppStyles />
       <MovieList name="Populares" getFrom="popular" />
       <MovieList name="Em exibição" getFrom="now_playing" />
+      <Trailers />
     </div>
   );
 };
