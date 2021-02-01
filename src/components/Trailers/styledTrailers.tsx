@@ -15,6 +15,21 @@ const StyledTrailers = styled.div`
     .trailersContainer {
       display: flex;
       flex-direction: column;
+      overflow-x: scroll;
+
+      ::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #80bcb8;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #e83f5b;
+        border-radius: 5px;
+      }
 
       p {
         font-weight: 300;
