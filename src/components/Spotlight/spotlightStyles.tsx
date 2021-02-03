@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const SpotlightStyles = styled.div`
   overflow-x: scroll;
+  position: relative;
   display: flex;
 
   .movie {
@@ -39,6 +40,36 @@ const SpotlightStyles = styled.div`
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 720px) {
+    display: grid;
+    grid-template-areas:
+      "spotlight spotlight top"
+      "spotlight spotlight bottom";
+    column-gap: 16px;
+    row-gap: 16px;
+    overflow: hidden;
+
+    .movie {
+      width: 100%;
+
+      &#spotlight {
+        grid-area: spotlight;
+
+        .about {
+          bottom: 7px;
+        }
+
+        img {
+          height: 98%;
+        }
+      }
+
+      img {
+        width: 100%;
       }
     }
   }

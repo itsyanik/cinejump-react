@@ -28,7 +28,7 @@ const Spotlight: React.FC = () => {
       {result &&
         result.map((pop, idx) => {
           return (
-            <div key={idx} className="movie">
+            <div key={idx} className="movie" id={idx === 0 ? "spotlight" : ""}>
               <img src={`${POSTER_URL}${pop.backdrop_path}`} alt={pop.title} />
               <div className="about">
                 <span className="title">{pop.title}</span>

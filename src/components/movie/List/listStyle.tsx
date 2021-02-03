@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const ListStyles = styled.div`
-  overflow-x: scroll;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 
