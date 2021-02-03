@@ -15,6 +15,11 @@ const MovieList: React.FC<IMovieList> = ({ name, getFrom }) => {
     const getList = async () => {
       const response = await tmdb.get(`/movie/${getFrom}`);
 
+      if (getFrom === "popular") {
+        setResult(response.data.results.slice(3));
+        return;
+      }
+
       setResult(response.data.results);
     };
 

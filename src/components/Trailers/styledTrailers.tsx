@@ -33,9 +33,9 @@ const StyledTrailers = styled.div`
 
       p {
         font-weight: 300;
-        font-size: 24px;
-        line-height: 28px;
-        margin: 16px 0;
+        size: 24px;
+        line-height: 27.58px;
+        margin: 15px 0;
       }
 
       .trailersWrapper {
@@ -51,6 +51,10 @@ const StyledTrailers = styled.div`
             min-width: 400px;
             min-height: 225px;
             border-radius: 10px;
+
+            @media only screen and (min-device-width: 320px) {
+              min-width: 320px;
+            }
           }
 
           span {
