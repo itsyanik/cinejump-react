@@ -4,6 +4,7 @@ import Header from "components/Header";
 import MovieList from "components/movie/List";
 import Trailers from "components/Trailers";
 import Spotlight from "components/Spotlight";
+import Footer from "components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <MovieList name="Populares" getFrom="popular" />
       <MovieList name="Em exibição" getFrom="now_playing" />
       <Trailers />
+      <Footer />
     </div>
   );
 };
