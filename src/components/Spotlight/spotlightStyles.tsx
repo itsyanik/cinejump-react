@@ -4,6 +4,7 @@ const SpotlightStyles = styled.div`
   overflow-x: scroll;
   position: relative;
   display: flex;
+  background: linear-gradient(180deg, #e8455b 80%, #fff 10%);
 
   .movie {
     position: relative;
