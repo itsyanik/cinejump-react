@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const MovieStyles = styled.div`
   position: relative;
@@ -43,6 +43,6 @@ const MovieStyles = styled.div`
       height: 110%;
     }
   }
-`
+`;
 
-export default MovieStyles
+export default MovieStyles;

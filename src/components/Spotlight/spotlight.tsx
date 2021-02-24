@@ -25,18 +25,27 @@ const Spotlight: React.FC = () => {
 
   return (
     <SpotlightStyles>
-      {result &&
-        result.map((pop, idx) => {
-          return (
-            <div key={idx} className="movie" id={idx === 0 ? "spotlight" : ""}>
-              <img src={`${POSTER_URL}${pop.backdrop_path}`} alt={pop.title} />
-              <div className="about">
-                <span className="title">{pop.title}</span>
-                {idx === 0 && <p className="overview">{pop.overview}</p>}
+      <div className="backgroundContainer">
+        {result &&
+          result.map((pop, idx) => {
+            return (
+              <div
+                key={idx}
+                className="movie"
+                id={idx === 0 ? "spotlight" : ""}
+              >
+                <img
+                  src={`${POSTER_URL}${pop.backdrop_path}`}
+                  alt={pop.title}
+                />
+                <div className="about">
+                  <span className="title">{pop.title}</span>
+                  {idx === 0 && <p className="overview">{pop.overview}</p>}
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+      </div>
     </SpotlightStyles>
   );
 };

@@ -1,23 +1,33 @@
 import styled from "styled-components";
 
 const ListStyles = styled.div`
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 
-  p {
-    font-weight: 300;
-    size: 24px;
-    line-height: 27.58px;
-    color: #e83f5b;
-    margin: 15px 0;
-  }
-
-  div {
+  .listContainer {
     display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 8px;
+    padding-right: 8px;
 
-    div {
-      flex: none;
+    p {
+      font-weight: 300;
+      size: 24px;
+      line-height: 27.58px;
+      color: #e83f5b;
+      margin: 15px 0;
+    }
+
+    .movieContainer {
+      display: flex;
+      overflow-x: scroll;
+
+      div {
+        flex: none;
+      }
     }
   }
 `;

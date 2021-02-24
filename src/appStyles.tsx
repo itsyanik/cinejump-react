@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -8,8 +8,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Ubuntu'
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    width: 100vw;
   }
-`
 
-export default  GlobalStyles
+  /* .App {
+
+    margin: auto;
+  } */
+`;
+
+export default GlobalStyles;
