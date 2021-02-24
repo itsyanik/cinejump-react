@@ -7,16 +7,18 @@ import { ReactComponent as UserCircle } from "../../assets/icons/user-circle.svg
 const Header: React.FC = () => {
   return (
     <HeaderStyles>
-      <div className="left">
-        <span>Filmes</span>
-        <span>Séries</span>
-      </div>
-      <div className="center">
-        <LogoWhite />
-      </div>
-      <div className="right">
-        <Search />
-        <UserCircle />
+      <div className="headerContainer">
+        <div className="left">
+          <span>Filmes</span>
+          <span>Séries</span>
+        </div>
+        <div className="center">
+          <LogoWhite />
+        </div>
+        <div className="right">
+          <Search />
+          <UserCircle />
+        </div>
       </div>
     </HeaderStyles>
   );

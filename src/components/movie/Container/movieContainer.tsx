@@ -7,16 +7,22 @@ interface ContainerProps {
   movie: Movie;
 }
 
-const MovieContainer: React.FC<ContainerProps> = ({ movie }) => {
-  const { original_title, poster_path } = movie;
+const MovieContainer: React.FC<ContainerProps> = ({
+  movie,
+  favorites,
+  toggleFavorite,
+}) => {
+  const { original_title, poster_path, id } = movie;
 
-  const [favorite, setFavorite] = useState(false);
   const basePosterUrl = process.env.REACT_APP_TMDB_IMAGE_URL;
+
+  const favoritesIds = favorites.map((favorite) => favorite.id);
+  const isFavorite = favoritesIds.includes(id);
 
   return (
     <MovieStyles>
-      <button onClick={() => setFavorite(!favorite)}>
-        <Heart fill={favorite ? "#E83F5B" : "black"} />
+      <button onClick={() => toggleFavorite(movie)}>
+        <Heart fill={isFavorite ? "#E83F5B" : "black"} />
       </button>
       <img
         src={`${basePosterUrl}/w780${poster_path}`}

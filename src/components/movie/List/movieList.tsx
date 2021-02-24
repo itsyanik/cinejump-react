@@ -8,32 +8,48 @@ interface IMovieList {
   list: List;
 }
 
-const MovieList: React.FC<IMovieList> = ({ name, getFrom }) => {
+const MovieList: React.FC<IMovieList> = ({
+  name,
+  getFrom,
+  favorites,
+  toggleFavorite,
+}) => {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    const getList = async () => {
-      const response = await tmdb.get(`/movie/${getFrom}`);
+    if (name !== "favorites") {
+      const getList = async () => {
+        const response = await tmdb.get(`/movie/${getFrom}`);
 
-      if (getFrom === "popular") {
-        setResult(response.data.results.slice(3));
-        return;
-      }
+        if (getFrom === "popular") {
+          setResult(response.data.results.slice(3));
+          return;
+        }
 
-      setResult(response.data.results);
-    };
+        setResult(response.data.results);
+      };
 
-    getList();
+      getList();
+    }
   }, [getFrom]);
 
   return (
     <ListStyles>
-      <p>{name}</p>
-      <div>
-        {result &&
-          result.map((movie, i) => {
-            return <MovieContainer movie={movie} key={i} />;
-          })}
+      <div className="listContainer">
+        <p>{name}</p>
+        <div className="movieContainer">
+          {result &&
+            result.map((movie, i) => {
+              return (
+                <MovieContainer
+                  movie={movie}
+                  key={i}
+                  favorites={favorites}
+                  toggleFavorite={toggleFavorite}
+                />
+              );
+            })}
+        </div>
       </div>
     </ListStyles>
   );
