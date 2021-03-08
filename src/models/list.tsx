@@ -1,6 +1,8 @@
 type List = {
-  name: string;
-  getFrom: string;
+  name: String;
+  getFrom: String;
+  favorites: any[];
+  toggleFavorite: Function;
 };
 
 export default List;

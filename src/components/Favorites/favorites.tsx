@@ -1,13 +1,20 @@
 import React from "react";
 import MovieContainer from "../movie/Container/movieContainer";
 import FavoritesStyles from "./favoritesStyles";
+import FavroritesProps from "../../models/favorites";
 
-const Favorites: React.FC = ({ favorites, toggleFavorite }) => {
+const Favorites: React.FC<FavroritesProps> = ({
+  favorites,
+  toggleFavorite,
+}) => {
   const localFavorites = JSON.parse(localStorage.getItem("favorites"));
 
-  return (
-    <FavoritesStyles>
-      <p>Favoritos</p>
+  const CurrentFavorites: React.FC = () => {
+    return localFavorites.length === 0 ? (
+      <div className="favoritesContainer">
+        <p>Ainda não há nenhum favorito :(</p>
+      </div>
+    ) : (
       <div className="favoritesContainer">
         {localFavorites?.map((favorite, idx) => {
           return (
@@ -20,6 +27,13 @@ const Favorites: React.FC = ({ favorites, toggleFavorite }) => {
           );
         })}
       </div>
+    );
+  };
+
+  return (
+    <FavoritesStyles>
+      <p>Favoritos</p>
+      <CurrentFavorites />
     </FavoritesStyles>
   );
 };

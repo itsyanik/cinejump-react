@@ -8,7 +8,7 @@ const FavoritesStyles = styled.div`
   margin: auto;
   padding-left: 8px;
   padding-right: 8px;
-  overflow-x: scroll;
+  overflow-x: auto;
 
   p {
     font-weight: 300;
