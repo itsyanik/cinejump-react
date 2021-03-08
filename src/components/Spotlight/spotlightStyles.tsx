@@ -19,6 +19,7 @@ const SpotlightStyles = styled.div`
     .movie {
       position: relative;
       width: 95%;
+      margin-right: 20px;
 
       img {
         width: 95vw;

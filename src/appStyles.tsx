@@ -11,12 +11,8 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Ubuntu';
     font-size: 16px;
     width: 100vw;
+    overflow-x: hidden;
   }
-
-  /* .App {
-
-    margin: auto;
-  } */
 `;
 
 export default GlobalStyles;

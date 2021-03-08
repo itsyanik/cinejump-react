@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import MovieStyles from "./movieContainerStyles";
 import { ReactComponent as Heart } from "../../../assets/icons/heart.svg";
-import Movie from "../../../models/movie";
+import MovieContainerProps from "../../../models/movieContainer";
 
-interface ContainerProps {
-  movie: Movie;
-}
-
-const MovieContainer: React.FC<ContainerProps> = ({
+const MovieContainer: React.FC<MovieContainerProps> = ({
   movie,
   favorites,
   toggleFavorite,

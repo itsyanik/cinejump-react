@@ -4,11 +4,7 @@ import List from "../../../models/list";
 import ListStyles from "./listStyle";
 import tmdb from "services/api/tmdb";
 
-interface IMovieList {
-  list: List;
-}
-
-const MovieList: React.FC<IMovieList> = ({
+const MovieList: React.FC<List> = ({
   name,
   getFrom,
   favorites,
@@ -31,7 +27,7 @@ const MovieList: React.FC<IMovieList> = ({
 
       getList();
     }
-  }, [getFrom]);
+  }, [getFrom, name]);
 
   return (
     <ListStyles>
